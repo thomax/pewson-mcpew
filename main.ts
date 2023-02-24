@@ -56,9 +56,9 @@ function spawnProjectile () {
     aProjectile.vx = 150
 }
 info.onLifeZero(function () {
-    game.gameOver(false)
-    game.setGameOverEffect(false, effects.melt)
+    game.setGameOverEffect(false, effects.dissolve)
     game.setGameOverScoringType(game.ScoringType.HighScore)
+    game.splash("Score: ", info.score())
 })
 function spawnPlayer () {
     aPlayer = sprites.create(img`
